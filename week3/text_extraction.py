@@ -235,7 +235,13 @@ class Text(object):
         mask = self.generate_mask(img,bbox)
         backtorgb = cv2.cvtColor(mask, cv2.COLOR_BGR2RGB)
         self.improve_txbox(img,cx,cy)
+        #----------------------------
 
+        img_path = 'C:\\Users\\JQ\\Documents\\GitHub\\ABC\\CV_M1\\W3\\QST2\\txt\\'+f+'.txt'
+        text_txt = text
+        txt_file = open(img_path,"a")
+        txt_file.write(text_txt+'\n')
+        #-------------------------
         if save_path is not None:
             self.save_mask(backtorgb,save_path,f)
 
@@ -257,12 +263,14 @@ class Text(object):
                 
 
 valid_images = [".jpg"]
-path = 'C:\\Users\\usuario\\Documents\\GitHub\\ABC\\CV_M1\\W3\\QSD1'
-save_path = 'C:\\Users\\usuario\\Documents\\GitHub\\ABC\\CV_M1\\W3\\QSD1\\generated_text_masks'
-path = "datasets/qsd1_w3"
+path = 'C:\\Users\\JQ\\Documents\\GitHub\\ABC\\CV_M1\\W3\\QST2\\croped'
+save_path = 'C:\\Users\\JQ\\Documents\\GitHub\\ABC\\CV_M1\\W3\\QSD1\\generated_text_masks'
 save_path = None
+dirs = os.listdir(path)
 if __name__ == "__main__":
     text_id = Text()
+    print('AWDAWDWA:',dirs[1])
+    x = 0
     for f in os.listdir(path):
         file_name = typex = os.path.splitext(f)[0]
         typex = os.path.splitext(f)[1]
@@ -272,6 +280,8 @@ if __name__ == "__main__":
         path_in = os.path.join(path, f)
         #print(path_in)
         img = text_id.input_image(path_in)
+        file_name = file_name[:5]
         bbox,mask,text = text_id.text_extraction(img,save_path,file_name)
         print(f)
         print('TEXT:',text)
+        x = x+1

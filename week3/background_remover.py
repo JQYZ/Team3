@@ -261,7 +261,7 @@ class Canvas(object):
         croped_img = img[y:y+h, x:x+w]
         #directory = save_directory_croped
         #os.chdir(directory)
-        filename = 'crop_'+file_name+'.jpg'
+        filename = file_name+'.jpg'
         file_path = os.path.join(save_directory_croped, filename)
         cv.imwrite(file_path, croped_img)
         #cv.imwrite(filename, croped_img)
@@ -270,7 +270,7 @@ class Canvas(object):
             croped_img = img[y2:y2+h2, x2:x2+w2]
             #directory = save_directory_croped
             #os.chdir(directory)
-            filename = 'crop_'+file_name+'_2'+'.jpg'
+            filename = file_name+'_2'+'.jpg'
             file_path = os.path.join(save_directory_croped, filename)
             cv.imwrite(file_path, croped_img)
             #cv.imwrite(filename, croped_img)
@@ -288,12 +288,9 @@ class Canvas(object):
         return final_mask,x,y,w,h,x2,y2,w2,h2
 
 valid_images = [".jpg"]
-load_directory = 'C:\\Users\\JQ\\Documents\\GitHub\\ABC\\CV_M1\\W2\\QSD2\\'
-save_direcory = 'C:\\Users\\JQ\\Documents\\GitHub\\ABC\\CV_M1\\W2\\QSD2\\generated_masks'
-save_directory_croped = 'C:\\Users\\JQ\\Documents\\GitHub\\ABC\\CV_M1\\W2\\QSD2\\croped'
-load_directory = "datasets/qsd2_w2/"
-save_direcory = 'datasets/qsd2_w2/generated_masks'
-save_directory_croped = 'datasets/qsd2_w2/croped'
+load_directory = 'C:\\Users\\JQ\\Documents\\GitHub\\ABC\\CV_M1\\W3\\QST2\\'
+save_direcory = 'C:\\Users\\JQ\\Documents\\GitHub\\ABC\\CV_M1\\W3\\QST2\\generated_masks'
+save_directory_croped = 'C:\\Users\\JQ\\Documents\\GitHub\\ABC\\CV_M1\\W3\\QST2\\croped'
 if __name__ == "__main__":
 
     museum = Canvas()
