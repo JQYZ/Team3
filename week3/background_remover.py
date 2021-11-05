@@ -288,12 +288,14 @@ class Canvas(object):
         return final_mask,x,y,w,h,x2,y2,w2,h2
 
 valid_images = [".jpg"]
-load_directory = 'C:\\Users\\JQ\\Documents\\GitHub\\ABC\\CV_M1\\W2\\QSD2\\'
-save_direcory = 'C:\\Users\\JQ\\Documents\\GitHub\\ABC\\CV_M1\\W2\\QSD2\\generated_masks'
-save_directory_croped = 'C:\\Users\\JQ\\Documents\\GitHub\\ABC\\CV_M1\\W2\\QSD2\\croped'
-load_directory = "datasets/qsd2_w2/"
+load_directory = 'C:\\Users\\usuario\\Documents\\GitHub\\ABC\\CV_M1\\W4\\QSD1\\'
+save_direcory = 'C:\\Users\\usuario\\Documents\\GitHub\\ABC\\CV_M1\\W4\\QSD1\\generated_masks'
+save_directory_croped = 'C:\\Users\\usuario\\Documents\\GitHub\\ABC\\CV_M1\\W4\\QSD1\\croped'
+
+"""load_directory = "datasets/qsd2_w2/"
 save_direcory = 'datasets/qsd2_w2/generated_masks'
-save_directory_croped = 'datasets/qsd2_w2/croped'
+save_directory_croped = 'datasets/qsd2_w2/croped'"""
+
 if __name__ == "__main__":
 
     museum = Canvas()

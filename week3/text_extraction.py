@@ -261,6 +261,7 @@ path = 'C:\\Users\\usuario\\Documents\\GitHub\\ABC\\CV_M1\\W3\\QSD1'
 save_path = 'C:\\Users\\usuario\\Documents\\GitHub\\ABC\\CV_M1\\W3\\QSD1\\generated_text_masks'
 path = "datasets/qsd1_w3"
 save_path = None
+
 if __name__ == "__main__":
     text_id = Text()
     for f in os.listdir(path):
